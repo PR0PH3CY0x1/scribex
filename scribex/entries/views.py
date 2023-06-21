@@ -22,7 +22,7 @@ class LockedView(LoginRequiredMixin):
 
 class EntryListView(LockedView, ListView):
     model = Entry
-    queryset = Entry.objects.all().order_by('-data_created')
+    queryset = Entry.objects.all().order_by('-date_created')
 
 
 class EntryDetailView(LockedView, DetailView):
